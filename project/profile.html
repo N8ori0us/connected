@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- Additional CSS must be placed after Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    
+    <title>Profile</title>
+</head>
+<body>
+    <header class="jumbotron jumbotron-fluid text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col col-sm-4 align-self-center">
+                    <a href="index.html"><img src="static/img/smile.png" class="img-fluid" /></a>
+                </div>
+                <div class="col-sm-3 ml-auto">
+                    <h1></h1>
+                    <div class="button">
+                        <a role="button" class="text-white" data-toggle="modal" data-target="#editModal"><i class="icon-pencil">Edit</i></a>
+                    <div>
+                </div>
+                <div class="col">
+
+                </div>
+            </div>
+        </div>
+    
+        
+    </header>
+    <body>
+        <div class="container">
+            <div class="row">
+                        <!-- Sidebar -->
+    <div class="wrapper">
+        <div class="col">
+            <div class="sidebar-header">
+                <a class="navbar-brand" type="button" data-toggle="collapse"><img src="static/img/formation.png" height= "150" width="150"/></a>
+            </div>
+
+            <ul id="sidebar" class="list-unstyled components align-items-center">
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+                <li class="active">
+                    <a href="#mySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">My Stuff</a>
+                    <ul class="collapse list-unstyled" id="mySubmenu">
+                        <li>
+                            <a role="button" id="story" href="#myModal">My Story</a>
+                        </li>
+                        <li>
+                            <a role="button" id="details" href="#myModal">My details</a>
+                        </li>
+                        <li>
+                            <a role="button" id="program" href="#myModal">My program</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="profile.html">My Page</a>
+                        </li>
+                        <li>
+                            <a href="index.html">Main Page</a>
+                        </li>
+                        <li>
+                            <a href="#">Journal</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="jft.html">Just for today</a>
+                </li>
+                <div>
+                    <li>Social</li>
+                    <li>
+                        <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram"></i></a></li>
+                    <li>
+                        <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+                
+                
+                </div>
+                
+            </div>
+        </div>
+    </body>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-sm-2 offset-1">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        
+                        <li><a href="https://www.buddhistrecovery.org/"><img src="static/img/BRN.png" width="150"alt="BuddhistRecoveryNetwork"/></a></li>
+                        <li><a href="https://www.smartrecovery.org/"><img src="static/img/smart-logo.svg" width="150"alt="SmartRecovery"/></a></li>
+                        <li><a href="https://www.samhsa.gov/find-help/national-helpline"><img src="static/img/SAMSA.png" width="150"alt="SAMSA"</a></li>
+                        <li><a href="https://www.aa.org/"><img src="static/img/AA.svg" width="150"alt="AlcoholicsAnonymous"/></a></li>
+                        <li><a href="https://na.org/"><img src="static/img/na.jpg" height="50"alt="NarcoticsAnonymous"/></a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-sm-5 text-center">
+                    <h5>Social</h5>
+                    <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram"></i></a>
+                    <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
+                    <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                    <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a role="button" class="btn btn-link" href="tel:+12065551234"><i class="fa fa-phone"></i> 1-206-555-1234</a><br />
+                    <a role="button" class="btn btn-link" href="mailto:campsites@nucamp.co" ><i class="fa fa-envelope-o"></i> connect@stayup.co</a>
+                </div>
+           </div>
+        </div>
+    </footer>
+
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://mozilla.github.io/nunjucks/files/nunjucks.min.js"></script>
+
+</body>
+</html>

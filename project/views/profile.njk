@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- Additional CSS must be placed after Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    
+    <title>{% block title %}Profile{% endblock %}</title>
+</head>
+<body>
+    <header class="jumbotron jumbotron-fluid text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col col-sm-4 align-self-center">
+                    <a href="index.html"><img src="static/img/smile.png" class="img-fluid" /></a>
+                </div>
+                <div class="col-sm-3 ml-auto">
+                    <h1>{{user.name}}</h1>
+                    <div class="button">
+                        <a role="button" class="text-white" data-toggle="modal" data-target="#editModal"><i class="icon-pencil">Edit</i></a>
+                    <div>
+                </div>
+                <div class="col">
+
+                </div>
+            </div>
+        </div>
+    
+        {# <nav class="navbar navbar-expandy navbar-dark ">
+            <div class="container">
+                <a class="navbar-brand" type="button" href="index.html"><img src="static/img/smile.png" height= "30" width="30"/></a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#nucampNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse text-white" id="nucampNavbar">
+                    <ul class="navbar nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa fa-home fa-lg"></i> Home</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="#"><i class="fa fa-info fa-lg"></i> About</a></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-list fa-lg"></i> Sites</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contactus.html"><i class="fa fa-address-card fa-lg"></i> Contacts</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav> #}
+    </header>
+    <body>
+        <div class="container">
+            <div class="row">
+                {% include "template/sidebar.njk" %}
+                {# {% block content %}
+                {% for p in posts %} #}
+                <div class="row">
+                    <div class="card col col-lg-5 mx-sm-2 mb-4">
+                        <div class="card-body col align-self-center">
+                            <a href="{{ url_for('views.note', model='Note', note_id=note['id']) }}">
+                                <h3 class="bg-light text-dark m-0">{{ note.title }}</h3>
+                            </a>
+                                <div class="card-body bg-light text-dark">
+                                    <p class="">{{ note.content }}</p>
+                                </div>
+                            <a href="{{ url_for('views.edit', model='Note', id=note['id']) }}">
+                                <span class="badge badge-info">Edit</span>
+                            </a>            
+                        </div>
+                    </div>
+                    {# {% endfor %} #}
+                    <div class="row">
+                        <div class="col-4"></div>
+                            <div class="col-5">
+                                <label for="input-group">Make a new note</label>
+                            </div>
+                        </div>
+                            <div class="row border-box">
+                                <div  class="col-1"></div>
+                                <form class="input-group" method="POST">
+                                    <div class="input-group col-10">
+                                        <div class="col">
+                                            <span class="input-group">
+                                                <input class="form-control" id="title" name="title"> 
+                                                </input>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-10 ">
+                                        <div class="input-group-text">
+                                            <textarea class="form-control" name="note" id="note" value="{{ request.form['content'] }}">
+                                            </textarea>
+                                            <span>
+                                                    <button type="submit" class="btn btn-primary">Save</button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                </div>
+                {# {% endblock %} #}
+            </div>
+        </div>
+    </body>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-sm-2 offset-1">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        {# <li><a href="index.html">Home</a></li> #}
+                        <li><a href="https://www.buddhistrecovery.org/"><img src="static/img/BRN.png" width="150"alt="BuddhistRecoveryNetwork"/></a></li>
+                        <li><a href="https://www.smartrecovery.org/"><img src="static/img/smart-logo.svg" width="150"alt="SmartRecovery"/></a></li>
+                        <li><a href="https://www.samhsa.gov/find-help/national-helpline"><img src="static/img/SAMSA.png" width="150"alt="SAMSA"</a></li>
+                        <li><a href="https://www.aa.org/"><img src="static/img/AA.svg" width="150"alt="AlcoholicsAnonymous"/></a></li>
+                        <li><a href="https://na.org/"><img src="static/img/na.jpg" height="50"alt="NarcoticsAnonymous"/></a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-sm-5 text-center">
+                    <h5>Social</h5>
+                    <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram"></i></a>
+                    <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
+                    <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                    <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a role="button" class="btn btn-link" href="tel:+12065551234"><i class="fa fa-phone"></i> 1-206-555-1234</a><br />
+                    <a role="button" class="btn btn-link" href="mailto:campsites@nucamp.co" ><i class="fa fa-envelope-o"></i> connect@stayup.co</a>
+                </div>
+           </div>
+        </div>
+    </footer>
+
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://mozilla.github.io/nunjucks/files/nunjucks.min.js"></script>
+
+
+</body>
+</html>

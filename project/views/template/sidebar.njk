@@ -1,0 +1,61 @@
+        <!-- Sidebar -->
+    <div class="wrapper">
+        <div class="col">
+            <div class="sidebar-header">
+                <a class="navbar-brand" type="button" data-toggle="collapse"><img src="static/img/formation2.png" height= "150" width="150"/></a>
+            </div>
+
+            <ul id="sidebar" class="list-unstyled components align-items-center">
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+                <li class="active">
+                    <a href="#mySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">My Stuff</a>
+                    <ul class="collapse list-unstyled" id="mySubmenu">
+                        <li>
+                            <a role="button" id="storyButton">My Story</a>
+                        </li>
+                        <li>
+                            <a role="button" id="detailButton">My details</a>
+                        </li>
+                        <li>
+                            <a role="button" id="programButton">My program</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="profile.html">My Page</a>
+                        </li>
+                        <li>
+                            <a href="index.html">Main Page</a>
+                        </li>
+                        <li>
+                            <a href="#">Journal</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="jft.html">Just for today</a>
+                </li>
+                <div>
+                    <li>Social</li>
+                    <li>
+                        <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram"></i></a></li>
+                    <li>
+                        <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+        {% include 'template/storyModal.njk' %}
+    </div>

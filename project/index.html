@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- Additional CSS must be placed after Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+    <link rel="stylesheet" href="static/css/custom.css" />
+    
+    <title>Home</title>
+</head>
+<body>
+    <header class="jumbotron jumbotron-fluid text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col col-sm-5">
+                    <h3>Addiction is the Opposite Connection...</h3>
+                </div>
+                <div class="col col-sm-3 align-self-center">
+                    <p class="">Just for today...</p>
+                    <a href="index.html"><img src="static/img/smile.png" class="img-fluid" /></a>
+                </div>
+                <div class="col-sm-3 ml-auto">
+                    <h1>Stay Connected</h1>
+                    <div class="button">
+                        <button class="signUp btn btn-transparent text-white">Sign up</button>
+                        <button class="btn btn-transparent text-white" id="loginButton">Login</button>
+                    <div>
+                </div>
+                <div class="col">
+
+                </div>
+            </div>
+        </div>
+        
+    </header>
+    <body>
+        <div class="container">
+            <div class="row">
+                        <!-- Sidebar -->
+    <div class="wrapper">
+        <div class="col">
+            <div class="sidebar-header">
+                <a class="navbar-brand" type="button" data-toggle="collapse"><img src="static/img/formation2.png" height= "150" width="150"/></a>
+            </div>
+
+            <ul id="sidebar" class="list-unstyled components align-items-center">
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+                <li class="active">
+                    <a href="#mySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">My Stuff</a>
+                    <ul class="collapse list-unstyled" id="mySubmenu">
+                        <li>
+                            <a role="button" id="storyButton">My Story</a>
+                        </li>
+                        <li>
+                            <a role="button" id="detailButton">My details</a>
+                        </li>
+                        <li>
+                            <a role="button" id="programButton">My program</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="profile.html">My Page</a>
+                        </li>
+                        <li>
+                            <a href="index.html">Main Page</a>
+                        </li>
+                        <li>
+                            <a href="#">Journal</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="jft.html">Just for today</a>
+                </li>
+                <div>
+                    <li>Social</li>
+                    <li>
+                        <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram"></i></a></li>
+                    <li>
+                        <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+        
+
+<div class="modal fade" id="storyModal" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Any experience strength and hope to share?</h2>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <form>
+                        
+                        <div class="col form-group">
+                            <label class="row form-label" for="story" >What's your story?</label>
+                        </div>
+                        <div class="col form-group">
+                            <textarea type="text" class="form-control" placeholder="How it was. Wht brought you here. How it is now."></textarea>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col form-group">
+                                <label for="postTo">Post where?</label>
+                            </div>
+                            <div class="col form-group ml-auto">
+                                <div class="row">
+                                    <input type="checkbox" name="postTo" id="my" value="My Page" /><label for="my">My Page</label>
+                                </div>
+
+                                <div class="row">
+                                    <input type="checkbox" name="postTo" id="main" value="Main Page" /><label for="main">Main Page</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="detailModal" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Profile Details</h2>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <h1 align="center"></h1>
+                    <form enctype="multipart/form-data">
+                        <div class="form-group">
+                            <legend>Profile Pic</legend>
+                            <div>
+                                <label for="avatar">Upload Your Image:</label>
+                                <input type="file" accept="image/*" class="form-control-file" id="avatar" name="avatar"
+                                
+                                onchange="loadFile(event)"/>
+                                <img id="output" width="200" remember="True"/>
+                            </div>
+                            <div class="form_group">
+                                <p>Save file as:<input class="form-control" type="text" name="name" id="name" ></p>
+                            </div>
+                            <p>Image Preview:</p>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-control-group">
+                                <label for="first_name">First Name</label>
+                                <input type="text" class="form-control" name="first_name" id="first_name" placeholder="What your first name?"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-control-group">
+                                <label for="last_name">Last Name</label>
+                                <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Last name?"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-control-group">
+                                <label for="bio">Bio</label>
+                                <input type="text" class="form-control" name="bio" id="bio" placeholder="Something about yourself"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-control-group">
+                                <div class="col-lg-6">
+                                    <table class="table table-responsive ">
+                                        <tbody>
+                                            <thead>Birthday</thead>
+                                            <td><input type="integer" class="form-control" name="mo" id="mo" placeholder="MM"/></td>
+                                            <td><input type="integer" class="form-control" name="day" id="day" placeholder="DD"/></td>
+                                            <td><input type="integer" class="form-control" name="yr" id="yr" placeholder="YYYY"/></td>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="programModal" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Program Manager</h2>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <form>
+                        
+                        <div class="col form-group">
+                            <label class="row form-label" for="story" ></label>
+                        </div>
+                        <div class="col form-group">
+                            <input type="calendar" class="calendar form-control" placeholder="How it was. Wht brought you here. How it is now."></textarea>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col form-group">
+                                <label for="postTo">Post where?</label>
+                            </div>
+                            <div class="col form-group ml-auto">
+                                <div class="row">
+                                    <input type="checkbox" name="postTo" id="my" value="My Page" /><label for="my">My Page</label>
+                                </div>
+
+                                <div class="row">
+                                    <input type="checkbox" name="postTo" id="main" value="Main Page" /><label for="main">Main Page</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade signUp" id="signupModal" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Any experience strength and hope to share?</h2>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <form method="POST">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="firstname">User Name</label>
+                            <input type="text" class="form-control" name="user_name" id="user_name" placeholder="User Name" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="password1">Password</label>
+                            <input type="password" class="form-control" name="password1" id="password1" placeholder="Create a new password" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="password2">Confirm Password</label>
+                            <input type="password" class="form-control" name="password2" id="password2" placeholder="Re-enter password" required/>
+                        </div>
+                        <br />
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="loginModal" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Login</h2>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <form method="POST">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Password" required/>
+                        </div>
+                        <br />
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                    <br />
+                    <a role="button" class="signUp">Sign up Here</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+
+                
+<div class="col">
+    <div class="pb-4">
+        <strong><h4>Social connection for a sober community.</h4></strong>
+        <p>When new in recovery it may be hard to disconnect from some of our social triggers in a digital landscape defined by hyperconnective social iteractions. Disconnnecing from conventional social media can be helpful and is often reccomended but staying connected to and building sober support networks is vital as well.</p>
+    </div>
+        
+    <div class="iframe-container">
+        <iframe src="https://www.youtube.com/embed/PY9DcIMGxMs" title="Everything you think you know about addiction is wrong | Johann Hari" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <h4 class="sml-text pb-4">Rethinking notions of Addiction</h4>
+    <div class="pb-4">
+        <a href="https://americanaddictioncenters.org/sobriety-guide/coping-mechanism"><h4>Substance Use as a Coping Mechanism</h4></a>
+        <p >Addiction is a coping mechanism.</p>
+    </div>
+    <div class="pb-4">
+        <a href="https://en.wikipedia.org/wiki/Evolutionary_models_of_human_drug_use#:~:text=Archeological%20evidence%20indicates%20the%20presence,approximately%2010%20million%20years%20ago."><h4>Archeological evidence indicates early hominid substance use dating back 200 million years.</h4></a>
+        <p>Addiction is in part, in our heritage.</p>
+    </div>
+    
+            </div>
+        </div>
+    </body>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-sm-2 offset-1">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        
+                        <li><a href="https://www.buddhistrecovery.org/"><img src="static/img/BRN.png" width="150"alt="BuddhistRecoveryNetwork"/></a></li>
+                        <li><a href="https://www.smartrecovery.org/"><img src="static/img/smart-logo.svg" width="150"alt="SmartRecovery"/></a></li>
+                        <li><a href="https://www.samhsa.gov/find-help/national-helpline"><img src="static/img/SAMSA.png" width="150"alt="SAMSA"</a></li>
+                        <li><a href="https://www.aa.org/"><img src="static/img/AA.svg" width="150"alt="AlcoholicsAnonymous"/></a></li>
+                        <li><a href="https://na.org/"><img src="static/img/na.jpg" height="50"alt="NarcoticsAnonymous"/></a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-sm-5 text-center">
+                    <h5>Social</h5>
+                    <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram"></i></a>
+                    <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
+                    <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                    <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <a role="button" class="btn btn-link" href="tel:+12065551234"><i class="fa fa-phone"></i> 1-206-555-1234</a><br />
+                    <a role="button" class="btn btn-link" href="mailto:campsites@nucamp.co" ><i class="fa fa-envelope-o"></i> connect@stayup.co</a>
+                </div>
+           </div>
+        </div>
+    </footer>
+
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://mozilla.github.io/nunjucks/files/nunjucks.min.js"></script>
+
+    <script>
+        $(function(){
+            $("#storyButton").click(function() {
+                $("#storyModal").modal("show");
+            });
+            $("#detailButton").click(function() {
+                $("#detailModal").modal("show");
+            });
+            $("#programButton").click(function() {
+                $("#programModal").modal("show");
+            });
+            $("#loginButton").click(function() {
+                $("#loginModal").modal("show");
+            });
+            $(".signUp").click(function() {
+                $("#signupModal").modal("show");
+            });
+
+        });
+
+        const loadFile = function(event) {
+            let output = document.getElementById('output');
+            output.src = URL.createObjectURL(event.target.files[0]);
+            output.onload = function() {
+                URL.revokeObjectURL(output.src) // free memory
+            }
+        };
+    </script>
+
+</body>
+</html>
